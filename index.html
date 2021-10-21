@@ -34,13 +34,30 @@
 
             <div class="wraper">
                 <input type="email" name="cus-email" id="cus-email" placeholder="Email Address"/>
-                <button class="cus-sub" type="submit"><img src="./images/icon-arrow.svg" alt="go"></button>
+                <img src="./images/icon-error.svg" alt="icon-error" class="icon-error">
+                <button id="cus-sub" class="cus-sub" type="submit"><img src="./images/icon-arrow.svg" alt="go"></button>
             </div>
+            <div class="error"><p>Please provide valid email</p></div>
         </div>
         <div class="demo">
             <img class="demo-img" src="./images/hero-desktop.jpg" alt="fashion">
         </div>
     </div>
+    <script type="text/javascript">
+        document.getElementById('cus-sub').onclick = ()=>{
+            console.log("tét");
+            let email = document.getElementById('cus-email').value;
+            if(email.includes(".com","@")) return;
+            else{
+                document.getElementsByClassName('icon-error')[0].setAttribute("id","icon-error");
+                document.getElementsByClassName('error')[0].setAttribute('id','error');
+                setTimeout(()=>{
+                    document.getElementsByClassName('icon-error')[0].removeAttribute("id","icon-error");
+                    document.getElementsByClassName('error')[0].removeAttribute('id', 'error');
+                },2000)
+            }
+        }
+    </script>
 </body>
 
 </html>
