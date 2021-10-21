@@ -128,7 +128,7 @@
     .content #logo{
         width: 15%;
         margin-top: 6%;
-        padding-bottom: 50%;
+        padding-bottom: 70%;
     }
     .content p,h1,.wraper{
         padding-left: 15%;
@@ -140,6 +140,9 @@
     .content p{
         text-align: center;
         font-size: 1.2em;
+    }
+    #cus-email{
+        width: 83%;
     }
     .cus-sub{
         width: 11%;
